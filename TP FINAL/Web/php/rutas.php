@@ -15,6 +15,8 @@
 	
 	//chofer
 	$chofer_home = "chofer_home.php";
+	$obtener_viaje="obtener_viaje.php";
+	$validar_id_viaje="validar_id_viaje.php";
 		
 		//vales de combustible
 		$registrar_vc="registrar_vc.php";

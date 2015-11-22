@@ -1,25 +1,29 @@
 <?PHP
-	session_start() ;
+	
+	 include ("chofer_home.php");
 	
 	$fecha_hora =$_POST ["fecha_hora_viaje"];
 	$km_recorridos =$_POST ["km_recorridos_viaje"];
 	$id_usuario = $_SESSION["id_usuario"];
 	$combustible = $_POST["combustbile"];
+	$id_viaje=$_POST ["id_viaje"];
 
 		include ('../rutas.php');
 	
-	$conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
-	mysql_select_db ("tpFinal",$conexion) or die ("no db");
+
 	
-	$consulta1= mysql_query(" SELECT MAX( id_viaje ) viaje
-                              FROM viaje 
-                              WHERE id_usuario = '".$id_usuario."' ");
+		$consultar_viaje= mysql_query("SELECT *
+					  FROM viaje
+					  WHERE id_viaje = '".$id_viaje."'")or die ("no query");
+					  
+	   $fecha = mysql_fetch_assoc($consultar_viaje);
+
                               
 	
+	if($fecha["fecha_fin"] == 0){						
+					
 							
-							$fila1 = mysql_fetch_assoc($consulta1)or die ;
 							
-							$id_viaje = $fila1["viaje"];
 	
 	$update_viaje_km_recorridos = mysql_query("UPDATE viaje
 												SET fecha_fin = '".$fecha_hora."',
@@ -37,7 +41,7 @@
 	
 	$total = $fila1 ["viaje_km"] + $fila1 ["trans_km"];
 	
-	echo $total;
+
 	
 	$id_trasnporte = $fila1["trans"];
 	
@@ -49,7 +53,8 @@
 	
 							
 		
-	echo "Registro exitos";
+	echo "Registro exitoso";
+	}else	echo"EL VIAJE QUE QUIERES MODIFICAR YA TERMINO";
 	/*if($update_viaje_km_recorridos == true)
 			  header("location:./".$chofer_home."");
 	*/

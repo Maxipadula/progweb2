@@ -8,6 +8,7 @@
 			 $permiso = "registrar vale";
 
 			 $id = $_SESSION["id_usuario"];
+			 $id_viaje = $_SESSION["id_viaje"];
 	
 			$conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
 			mysql_select_db ("tpFinal",$conexion) or die ("no db");
@@ -23,6 +24,11 @@
 				
 				<form class='contacto' method="post" action="<?php echo $validar_vc?>">
 					<div id="contacto">
+						</br>
+						<div><label>ID de VIAJE</label>
+						</br>
+						<input type="text" name="id_viaje"  value="<?php echo $id_viaje?>"readonly = "readonly">
+						</div>	
 						</br>
 						<div><label>FECHA Y HORA
 							<input type="text" name="fecha_hora_vc">

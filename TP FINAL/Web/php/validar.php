@@ -30,7 +30,7 @@
 				 $_SESSION["id_usuario"] = $fila1['id_usuario'];
 				 $_SESSION["nombre"] = $fila1['nombre'] ;
 				 
-	             header("location:./CHOFER/".$chofer_home."");
+	             header("location:./CHOFER/".$obtener_viaje."");
 				 
 				 
 			}else if ($fila1["codigo_rol"] == 2){

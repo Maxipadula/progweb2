@@ -11,6 +11,7 @@
 			 
 			 $permiso ="registrar datos de viaje";
 			 $id = $_SESSION["id_usuario"];
+			 $id_viaje = $_SESSION["id_viaje"];
 			 
 			 include ('../rutas.php');
 			
@@ -31,6 +32,12 @@
 			<div id="contacto">
 				
 				</br>
+						<div><label>ID de VIAJE</label>
+						</br>
+						<input type="text" name="id_viaje"  value="<?php echo $id_viaje?>"readonly = "readonly">
+						</div>	
+						</br>
+				</br>
 				<div><label>FECHA Y HORA DE LLEGADA
 					<input type="text" name="fecha_hora_viaje">
 					</label>
@@ -42,7 +49,7 @@
 					</label>
 				</div>
 				
-					
+				</br>
 				<div><label>COMBUSTIBLE CONSUMIDO
 					<input type="text" name="combustbile" size="5">
 					</label>
