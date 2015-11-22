@@ -60,6 +60,7 @@
 		
 		//ver mapa
 		$ver_mapa="ver_mapa.php";
+		$control_mapa="control_mapa.php";
 
 	
 	

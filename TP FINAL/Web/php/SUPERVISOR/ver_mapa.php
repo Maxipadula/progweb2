@@ -1,60 +1,42 @@
-<html>		
-
-	<?php include ("supervisor_home.php");
-	
-			
-	 
-		include ('../rutas.php');
-	  
-		$permiso = "supervisor home";
-	  	
-		$conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
-		mysql_select_db ("tpFinal",$conexion) or die ("no db");
-	  
-		include("../permiso.php");
-	  
-		if ( isset ($_SESSION["nombre"])){
-		
-		$nombre = $_SESSION["nombre"];
-	   
-		}
-		else{
-		     session_destroy();
-    
-           header("location:login.php");
-	   }
-	   
-	?>
-	<!DOCTYPE html>
-	<div id="divContenedor">
-	<div class="divTabla">
-	<head>
-	<center>
-		<LINK REL="Stylesheet" HREF="../../Css/login.css" TYPE="text/css">
-		
-		<script src="http://maps.googleapis.com/maps/api/js"></script> <!--La API de Google Maps es una biblioteca JavaScript.-->
-		<script>
-			function initialize() {                    /*para inicializar el mapa */
-				var mapProp = {                            /*objetivo, para las propiedades del mapa */  
-					center:new google.maps.LatLng(-34.62529785895708,-58.383750915527344),    /*latitud y longitud del mapa */
-					zoom:5,                               
-					mapTypeId:google.maps.MapTypeId.ROADMAP    /*tipos de mapas */
-				};
-				var map=new google.maps.Map(document.getElementById("googleMap"),mapProp); /*El código anterior crea un nuevo mapa en el interior del elemento*/
-				var mapa = new google.maps.Map(map, mapProp);
-				var marcador = new google.maps.Marker({  
-					position: new google.maps.LatLng(-34.62529785895708, -58.383750915527344),
-					map: map
-				});
-			}
-			google.maps.event.addDomListener(window, 'load', initialize); /*ejecuta la funcion de "initialize"*/
-		
-		</script>
+<html>
 	
 	</head>
-
+	
 		<body>
-			<div id="googleMap" style="width:500px;height:380px;"></div>   
+<div id="divContenedor">
+<div class="divTabla">
+	 	<p>SELECCIONE VIAJE A SEGUIR</p>
+		
+		
+			<?PHP
+			
+			include ("supervisor_home.php");
+		
+			
+			$consulta_viaje_modificar  = mysql_query ("SELECT V.id_viaje id_vi, U.nombre nomb , A.descripcion descrip, T.id_transporte id_trans, 
+														V.origen ori, V.destino dest, V.cliente cli, V.fecha_inicio fecha, V.carga carg
+													   FROM viaje V inner join 
+															usuario U on V.id_usuario = U.id_usuario inner join 
+															acoplado A on V.id_acoplado = A.id_acoplado inner join 
+															transporte T on V.id_transporte = T.id_transporte 
+													   ") or die (mysql_error());
+			
+			if ($row = mysql_fetch_array($consulta_viaje_modificar)){
+			echo "<table border = '1'> \n";
+			echo "<tr><td>ID</td><td>NOMBRE</td><td>ACOPLADO</td><td>TRANSPORTE</td><td>ORIGEN</td><td>
+			DESTINO</td><td>CLIENTE</td><td>FECHA_I</td><td>CARGA</td></tr> \n";
+			do{
+				echo "<tr><td>".$row["id_vi"]."</td><td>".$row["nomb"]."</td><td>".$row["descrip"]
+				."</td><td>".$row["id_trans"]."</td><td>".$row["ori"]."</td><td>".$row["dest"]
+				."</td><td>".$row["cli"]."</td><td>".$row["fecha"]."</td><td>".$row["carg"]
+				."</td><td class='tBotonAgregar'><a href='".$control_mapa."?ID=".$row["id_vi"]."' class = 'tlink'>VER CARGAS</a></td></tr> \n";     
+			} while ($row = mysql_fetch_array ($consulta_viaje_modificar));
+			echo "</table> \n";
+		} else {
+			echo "no se encontraron ningun registro";
+		} 
+        ?>
+	 
 		</body>
 	</center>
 	</div>

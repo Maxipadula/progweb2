@@ -43,6 +43,17 @@
 						</div>
 						</br>
 						
+						<div><label>LATITUD(que figura en gps)
+							<input type="text" name="latitud">
+							</label>
+						</div>
+						</br>
+						<div><label>LONGITUD(que figura en gps)
+							<input type="text" name="longitud">
+							</label>
+						</div>
+						</br>
+						
 						</br>
 						
 						<div><label>COSTO
