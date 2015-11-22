@@ -2,8 +2,8 @@
 	 <?php include ("viajes_datos.php"); ?>
 	
  	<head>
- 		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="../../../../js/funciones/validarModificarUser1.js"></script>
+ 		<script type="text/javascript" src="../../js/funciones/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../js/funciones/validarAgregarViaje.js"></script>
 		<LINK REL="Stylesheet" HREF="../../css/login.css" TYPE="text/css">
 	</head>
 	
@@ -54,9 +54,10 @@
 				} while ($row = mysql_fetch_array ($consulta));			
 				echo "</table> \n";
 				} else {
-				echo "no se encontraron ningun registro";
+				echo "No se encontraron registros";
 				} 
 			?>
+			<div id="mensaje1" class="errores"> Ingrese una opcion</div>
 				<br>
  			
 				<?php	
@@ -69,7 +70,7 @@
 			
 				if ($row = mysql_fetch_array($consulta)){
 				echo "<table border = '1'> \n";
-				echo "<tr><td>patente</td><td>vehiculo</td><td>Seleccionar</td></tr> \n";
+				echo "<tr><td>Patente</td><td>Vehiculo</td><td>Seleccionar</td></tr> \n";
 				do{
 					echo "<tr><td>".$row["patente"]."</td><td>".$row["marca"]."  ".$row["modelo"].
 					"</td><td class='tBotonAgregar'><label><input type='radio' name='transporte' value='".$row["id"]."'></input></label></td></tr> \n"; 
@@ -78,10 +79,10 @@
 					
 				echo "</table> \n";
 				} else {
-				echo "no se encontraron ningun registro";
+				echo "No se encontraron registros";
 				} 
 			?>
-
+				<div id="mensaje2" class="errores"> Ingrese una opcion</div>
 				</br>
 				
 				<?php	
@@ -92,59 +93,59 @@
 			
 				if ($row = mysql_fetch_array($consulta_acoplado)){
 				echo "<table border = '1'> \n";
-				echo "<tr><td>descripcion</td><td>Seleccionar</td></tr> \n";
+				echo "<tr><td>Descripcion</td><td>Seleccionar</td></tr> \n";
 				do{
 					echo "<tr><td>".$row["descr"]."</td><td class='tBotonAgregar'> <input type='radio' name='acoplado' class = 'tlink' value='".$row["id_aco"]."'></a></td></tr> \n"; 
 					
 				} while ($row = mysql_fetch_array ($consulta_acoplado));
 				echo "</table> \n";
 				} else {
-				echo "no se encontraron ningun registro";
+				echo "No se encontraron registros";
 				} 
 			?>
-
+				<div id="mensaje3" class="errores"> Ingrese una opcion</div>
 				</br>
- 				<div><label>ORIGEN
+
+ 				<div><label>ORIGEN</label>
  					</br>
- 					<input type="text" name="origen">
- 				</label>
+ 					<input type="text" name="origen" id="origen" placeholder="Origen">
+ 					<div id="mensaje4" class="errores"> Ingrese solo letras</div>
  				</div>
  				</br>
 				
-				<div><label>DESTINO
+				<div><label>DESTINO</label>
  				</br>
- 				<input type="text" name="destino">
- 				</label>
+ 				<input type="text" name="destino" id="destino" placeholder="Destino">
+ 				<div id="mensaje5" class="errores"> Ingrese solo Letras</div>
  				</div>
  				</br>
 				
-				<div><label>CLIENTE
+				<div><label>CLIENTE</label>
  				</br>
- 				<input type="text" name="cliente">
- 				</label>
+ 				<input type="text" name="cliente" id="cliente" placeholder="Cliente">
+ 				<div id="mensaje6" class="errores"> Ingrese Cliente</div>
  				</div>
  				</br>
 				
-				 <div><label>FECHA DE INICIO
+				 <div><label>FECHA DE INICIO</label>
  				</br>
- 				<input type="text" name="fecha_inicio">
- 				</label>
+ 				<input type="text" name="fecha_inicio" id="fIni" placeholder="AAAA-MM-DD">
+ 				<div id="mensaje7" class="errores"> Ingresa fecha valida [AAAA-MM-DD]</div>
  				</div>
  				</br>
 				
-				 <div><label>CARGA
+				 <div><label>CARGA</label>
  				</br>
- 				<input type="text" name="carga">
- 				</label>
+ 				<input type="text" name="carga" id="carga" placeholder="Carga">
+ 				<div id="mensaje8" class="errores"> Ingrese solo numeros</div>
  				</div>
  				</br>
 				
- 				<input type="submit" value="Agregar">
+ 				<input type="submit" value="Agregar" class="boton" id="boton">
+				<input type="submit" value="Atras" onclick = "location='viajes_datos.php'" class="boton"/>
 				<br>
  		</div>
- 	</form>
-	
-	<input type="submit" value="Atras" onclick = "location='viajes_datos.php'"/>
+	</form>
  
  </div>
  </diV>
