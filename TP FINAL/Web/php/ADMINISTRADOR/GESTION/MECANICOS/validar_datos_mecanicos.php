@@ -1,6 +1,6 @@
 <html> 
  	<?PHP 
- 	session_start() ; 
+ 	
  	 
 	$id_mecanic =$_POST ["id_me"]; 	 
  	$nombree =$_POST ["nombre"];

@@ -3,6 +3,7 @@
 	</head>
 	
 		<body>
+<?php include ("supervisor_home.php"); ?>
 <div id="divContenedor">
 <div class="divTabla">
 	 	<p>SELECCIONE VIAJE A SEGUIR</p>
@@ -10,7 +11,7 @@
 		
 			<?PHP
 			
-			include ("supervisor_home.php");
+			
 		
 			
 			$consulta_viaje_modificar  = mysql_query ("SELECT V.id_viaje id_vi, U.nombre nomb , A.descripcion descrip, T.id_transporte id_trans, 

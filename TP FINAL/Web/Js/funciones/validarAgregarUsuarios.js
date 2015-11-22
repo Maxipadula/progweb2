@@ -13,7 +13,7 @@ $(document).ready(function () {
         var numDoc = $("#numDoc").val();
 
          //Verifica que no este vacío y que sean letras
-        if(user == "" || !expr.test(user)){
+        if(user == ""){
             $("#mensaje1").fadeIn("slow"); //Muestra mensaje de error
             return false;                 
         }

@@ -43,7 +43,7 @@
  				<div><label>USUARIO</label>
  					</br>
  					<input type="text" name="usuario" id="user" placeholder="Usuario">
- 					<div id="mensaje1" class="errores"> Ingresa solo letras</div>
+ 					<div id="mensaje1" class="errores"> Ingresa un usuario</div>
  				</div>
  				</br>
  								

@@ -49,14 +49,14 @@
  				<div><label>MODELO</label>
  				</br>
 				<input type="text" name="modelo" id="modelo" placeholder="Ingrese Modelo">
-				<div id="mensaje1" class="errores"> Ingresa solo letras</div>
+				<div id="mensaje1" class="errores"> Seleccione un modelo</div>
  				</div>
 				<br>
 				
 				<div><label>MARCA</label>
  				</br>
 				<input type="text" name="marca" id="marca" placeholder="Ingrese Marca">
-				<div id="mensaje2" class="errores"> Ingresa solo letras</div>
+				<div id="mensaje2" class="errores"> Seleccione una marca</div>
  				</div>
 				<br>
 				

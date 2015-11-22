@@ -10,14 +10,14 @@ $(document).ready(function () {
         var carga = $("#carga").val();
 
          //Verifica que no este vacío y que sean letras
-        if(modelo == "" || !expr.test(modelo)){
+        if(modelo == ""){
             $("#mensaje1").fadeIn("slow"); //Muestra mensaje de error
             return false;                 
         }
         else{
             $("#mensaje1").fadeOut();
 
-            if(marca == "" || !expr.test(marca)){
+            if(marca == ""){
                 $("#mensaje2").fadeIn("slow");
                 return false;
                 }

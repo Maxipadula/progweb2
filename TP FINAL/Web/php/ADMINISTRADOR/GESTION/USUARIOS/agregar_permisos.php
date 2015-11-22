@@ -46,7 +46,7 @@
  				</br>
 		
  				<input type="submit" value="Agregar" class="boton" id="boton" />
-				<input type='button' onclick='history.back()' name='volver atrás' value='Volver' class="boton"/>
+				
  	</form>
 </div>
 </body>

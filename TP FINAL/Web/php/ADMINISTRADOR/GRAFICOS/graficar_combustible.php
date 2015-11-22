@@ -15,7 +15,7 @@ $conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
 			
 			$fecha=array();
 			$combustible=array();
-    
+    if($cant !=0){
 			while($row = mysql_fetch_assoc($consulta_datos)) { 
 				
 				$datos= $row; 
@@ -23,14 +23,14 @@ $conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
 				$combustible[] = $datos["combustible"];
 				$fecha[] = $datos["fecha"];
 				
+				
     
 			} 
-	
+
 
 			
 include ("./jpgraph-3.5.0b1/src/jpgraph.php");
 include ("./jpgraph-3.5.0b1/src/jpgraph_bar.php");
-
 
 
 // Create the graph. These two calls are always required
@@ -58,4 +58,7 @@ $curva->SetWidth(30);
 
 // Display the graph
 $graph->Stroke();
+}else{
+	echo "EL TRANSPORTE SELECCIONADO NO REALIZO NINGUN VIAJE";
+}
 ?>

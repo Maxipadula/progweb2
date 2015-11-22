@@ -55,8 +55,10 @@
 				<br>
 				Empresa
 				<input type ="text" name="empresa" disabled>
+				<div id="mensaje2" class="errores"> Ingrese una empresa</div>
 				<br><br>
 				<input type="submit" value="Agregar" class="boton" id="boton">
+				
 
  		</div>
  	</form>

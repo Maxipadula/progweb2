@@ -22,7 +22,7 @@
 		header("location:./".$chofer_home."");
 	}
 	else{
-		echo "ID DE VIAJE INCORRECTO";
+		echo "LO SIENTO, NO ESTAS ASIGNADO AL VIAJE INGRESADO";
 	}
 	
 

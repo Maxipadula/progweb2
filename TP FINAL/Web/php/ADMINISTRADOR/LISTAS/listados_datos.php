@@ -43,7 +43,7 @@
                 </li>
 
                 <li>
-                    <a href="../<?php echo $administrador_home?>">SALIR</a>
+                    <a href="../<?php echo $administrador_home2?>">SALIR</a>
                 </li>
             </ul>
         </nav>
