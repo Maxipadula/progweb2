@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-		<title>Agregar User | S.G.L</title>
+		<title>Modificar User | S.G.L</title>
 		
 		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../../../../js/funciones/validarModificarUsuarios.js"></script>
@@ -66,9 +66,9 @@
 		;}
 				echo "<br>";
 		
-		echo "</br> <input type='submit' value='Enviar'/>
-							<input type='reset' value='Borrar'/>
-							<input type='button' onclick='history.back()' name='volver atrás' value='Volver'></form> ";
+		echo "</br> <input type='submit' value='Enviar' class='boton'/>
+							<input type='reset' value='Borrar' class='boton'/>
+							<input type='button' onclick='history.back()' name='volver atrás' value='Volver' class='boton'></form> ";
 		
 		
 		

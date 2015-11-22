@@ -1,4 +1,5 @@
 <html>
+
 	<?php include("vehiculos_datos.php"); ?>
 	<?PHP
 	
@@ -17,7 +18,7 @@
 	
 	mysql_query("DELETE FROM vehiculo WHERE id_vehiculo = '".$id_vehiculo_elim."'")
     or die(mysql_error()); 
-	echo("ELIMINACION EXITOSA");
+	echo("<div id='divContenedor'>ELIMINACION EXITOSA</div>");
 	?>
-	
+	</div>
 </html>

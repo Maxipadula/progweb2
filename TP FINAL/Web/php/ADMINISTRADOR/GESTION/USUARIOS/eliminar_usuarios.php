@@ -3,7 +3,7 @@
  <?php include ('../../../rutas.php'); ?>
 	<head>
  		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="../../../../js/funciones/validarModificarUser1.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarEliminar.js"></script>
 		<LINK REL="Stylesheet" HREF="../../css/login.css" TYPE="text/css">
 	</head>
 <body>
@@ -33,8 +33,7 @@
 			do{
 				echo "<tr><td>".$row["nombre"]."</td><td>".$row["usuario"]."</td><td>"
 				.$row["contra"]."</td><td>".$row["fecha"]."</td><td>".$row["numdoc"]."
-				</td><td>".$row["rol"]."</td><td class='tBotonElim'><a href='".$validar_eliminacion_usuario."?ID=".$row["ID"]
-				."' class = 'tlink'>Eliminar</a></td></tr> \n";     
+				</td><td>".$row["rol"]."</td><td class='tBotonElim'><a href='".$validar_eliminacion_usuario."?ID=".$row["ID"]."' class = 'tlink'>Eliminar</a></td></tr> \n";     
 			} while ($row = mysql_fetch_array ($consulta));
 			echo "</table> \n";
 			

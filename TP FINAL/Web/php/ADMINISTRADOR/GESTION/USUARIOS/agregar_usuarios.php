@@ -63,8 +63,8 @@
 				
  				<div><label>FECHA DE NACIMIENTO</label>
  					</br>
- 					<input type="text" name="fecha_nacimiento" id="fnac" placeholder="DD/MM/AAAA">
- 					<div id="mensaje4" class="errores"> Ingresa fecha valida [DD/MM/AAAA]</div> 				
+ 					<input type="text" name="fecha_nacimiento" id="fnac" placeholder="AAAA-MM-DD">
+ 					<div id="mensaje4" class="errores"> Ingresa fecha valida [AAAA-MM-DD]</div> 				
  				</div>
  				</br>
 				
@@ -72,7 +72,7 @@
  					</br>
 					 <select name="id_tipo_documento"> 
 					 <option value="vacio" selected=""></option>
-					 <option value="DNI">dni</option>
+					 <option value="DNI">DNI</option>
                      <option value="Libreta Enrolamiento">Libreta de enrolamiento</option>
                      <option value="Libreta Civica">Libreta civica</option>
                      </select>

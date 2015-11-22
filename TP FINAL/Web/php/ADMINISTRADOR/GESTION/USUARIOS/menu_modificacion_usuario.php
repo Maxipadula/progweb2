@@ -1,6 +1,10 @@
 <html>
  <?php include ("usuarios_datos.php"); ?>
 <head>
+			<title>MODIFICAR USER | S.G.L</title>
+		
+		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarModificarUser.js"></script>
 </head>
 <body>
 	<?php $id = $_GET["ID"]?>
@@ -27,8 +31,9 @@
 			<br>
 			<input type="checkbox" name="datos[]" value="rol">Rol</input>
 			</br>
+			<div id="mensaje1" class="errores"> Seleccione al menos una opcion</div>
 			</br>
-		</div>
+			</div>
 			<input type="submit" value="Modificar" class="boton" />
 			<input type="button" onclick="history.back()" name="volver atrás" value="Volver" class="boton"/>
 	

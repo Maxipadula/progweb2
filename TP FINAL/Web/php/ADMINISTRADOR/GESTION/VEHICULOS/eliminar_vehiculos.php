@@ -4,11 +4,9 @@
         <title>
             Eliminar Vehiculo | S.G.L
         </title>
-        <script src="../../../../js/funciones/jquery-1.11.3.min.js" type=
-        "text/javascript">
+        <script src="../../../../js/funciones/jquery-1.11.3.min.js" type="text/javascript">
         </script>
-        <script src="../../../../js/funciones/validarEliminarVehiculos.js"
-        type="text/javascript">
+        <script src="../../../../js/funciones/validarEliminar.js" type="text/javascript">
         </script>
         <link href="../Css/login.css" rel="Stylesheet" type="text/css">
     </head>

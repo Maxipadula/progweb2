@@ -1,4 +1,11 @@
  <html>
+ <head>
+ 			<title>Agregar Mecanico | S.G.L</title>
+		
+		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarAgregarMecanico.js"></script>
+ </head>
+ <body>
  <?php include ("mecanicos_datos.php");?>
  
 
@@ -19,6 +26,7 @@
 			
 			$id_mecanico +=1;
 	?>
+	<div id="divContenedor">
  	FORMULARIO PARA TABLA MECANICO:
  	<form class='contacto' method="post" name="mecanico" action="<?php echo $validar_datos_mecanicos ?>">
  		<div id="contacto">
@@ -32,25 +40,27 @@
 				
  				<div><label>NOMBRE Y APELLIDO
  					</br>
- 					<input type="text" name="nombre">
+ 					<input type="text" name="nombre" id="name" />
+ 					<div id="mensaje1" class="errores"> Ingresa solo letras</div>
  				</label>
  				</div>
  				</br>
 				
 		
 				
-				<input type="radio" name="internoexterno" value="interno" >Interno<br>
-				<input type="radio" name="internoexterno" value="externo" onclick="document.mecanico.empresa.disabled=!document.mecanico.empresa.disabled">Externo			
+				<input type="radio" name="internoexterno" value="interno" >Interno</input>
+				<br>
+				<input type="radio" name="internoexterno" value="externo" onclick="document.mecanico.empresa.disabled=!document.mecanico.empresa.disabled">Externo</input>
 			
 				<br>
 				Empresa
 				<input type ="text" name="empresa" disabled>
 				<br><br>
-				<input type="submit" value="Agregar">
+				<input type="submit" value="Agregar" class="boton" id="boton">
 
  		</div>
  	</form>
 	
-	
- 
+	</div>
+ </body>
  </html>

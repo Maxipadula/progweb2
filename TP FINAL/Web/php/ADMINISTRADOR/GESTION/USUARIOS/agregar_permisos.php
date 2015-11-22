@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="../../../../js/funciones/validarModificarUser1.js"></script>
+	<script type="text/javascript" src="../../../../js/funciones/validarAgregarPermiso.js"></script>
 </head>
 <body>
 <div id="divContenedor">

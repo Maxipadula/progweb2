@@ -41,7 +41,7 @@
 										values	('".$id."', '".$estado."', '".$id_vehiculo."','".$chasis."', '".$motor."','".$fabricacion."','".$patente."','".$km."')
  										    ;")or die (mysql_error());
 	
-	echo"Operacion exitosa";
+	echo"<div id='divContenedor'>Operacion exitosa</div>";
  	 ?>
 </body>
  </html> 

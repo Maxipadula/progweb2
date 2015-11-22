@@ -16,7 +16,7 @@
 	mysql_query("DELETE FROM usuario WHERE id_usuario = '".$id_usu_eliminar."'")
     or die(mysql_error()); 
 	
-	echo("ELIMINACION EXITOSA");
+	echo("<div id='divContenedor'>ELIMINACION EXITOSA </div>");
 	?>
 	
 </html>

@@ -1,5 +1,8 @@
-<html>
+
+<html>
 <head>
+	<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../../../js/funciones/validarEliminar.js"></script>
 </head>
 <body>
 <?php include ("permisos_datos.php"); ?>

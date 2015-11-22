@@ -59,6 +59,6 @@
 		
 	}
 	
-	echo("MODIFICACION EXITOSA");
+	echo("<div id='divContenedor'>MODIFICACION EXITOSA</div>");
 
 ?>

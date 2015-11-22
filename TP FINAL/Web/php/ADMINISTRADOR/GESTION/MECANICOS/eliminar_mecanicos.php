@@ -1,6 +1,10 @@
 <html>
-
-
+<head>
+		<title>Eliminar Mecanico | S.G.L</title>
+		
+		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarEliminar.js"></script>
+</head>
 	
  <?php include ("mecanicos_datos.php");?>
  
