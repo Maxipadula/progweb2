@@ -25,6 +25,7 @@
 		//registro de viajes
 		$chofer_registro_viaje="chofer_registro.php";
 		$chofer_validar_registro_viaje ="validar_registro_chofer.php";
+		$consulta_viaje="consulta_viaje.php";
 	
 
 		
