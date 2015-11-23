@@ -164,19 +164,30 @@ create table if not exists viaje
 	 ON UPDATE CASCADE
 
 );
+create table if not exists lugar
+	(id_lugar int primary key,
+     descripcion varchar (30),
+     latitud varchar (30),
+     longitud varchar (30)
 
+);
 
 create table if not exists vale_combustible
 	(id_vc int primary key,
      id_viaje int,
      fecha_hora datetime,
-	 lugar varchar (30),
+	 id_lugar int,
      costo double,
      cantidad double,
      constraint id_viaje_vc foreign key (id_viaje) references viaje (id_viaje)
 	 ON DELETE CASCADE
+	 ON UPDATE CASCADE,
+	 constraint id_lugar_vc foreign key (id_lugar) references lugar (id_lugar)
+	 ON DELETE CASCADE
 	 ON UPDATE CASCADE
 );
+
+
 
 
 

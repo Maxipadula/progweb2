@@ -172,7 +172,7 @@ values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106',100000),
         
 /*select *
 from transporte;
- */
+
 /*SELECT T.id_transporte, M.descripcion Marca, MO.descripcion Modelo, num_chasis NroChasis, num_motor, anio_fabricacion, patente
 										  FROM transporte T inner join 
 											   
@@ -213,9 +213,9 @@ values	(1122, 30,101, 2222, 'Buenos Aires', 10000, 'Florianopolis', 'Pedromania'
 		(3344, 50,101, 2222, 'Rio Negro',  4000, 'Chile','TodoRopa', '2015-10-11 05:00:00', '2015-11-11 01:18:05', 'pantalones',500),
 		(4455, 30,401, 1111, 'Cordoba',  9000, 'Bolivia','Todopordospesos', '2015-08-01 05:25:54','2015-08-01 18:25:55','remeras',400),
 		(5566, 30,0, 2222, 'Misiones', 4000, 'Montevideo','sisis', '2015-12-12 12:30:34', '2015-12-12 16:30:00','medias',600),
-		(6677, 50,601, 2222, 'Mendoza',  8500, 'Asuncion','nadanada', '2015-07-06 12:00:20', '2015-07-06 20:40:29','buzos',750);
 
-SELECT Km_recorridos km
+
+SELECT *
 										   FROM viaje ; 
 
 
@@ -228,20 +228,31 @@ SELECT V.id_viaje id_vi, U.nombre nomb , A.descripcion descrip, T.id_transporte 
 															transporte T on V.id_transporte = T.id_transporte; 
 
 */
+insert into lugar(id_lugar,descripcion,latitud,longitud)
+values (1,'Entre Rios','-32.0333','-60.3167'),   
+       (2,'canasvieiras','-27.4333','-48.5'),
+	   (3,'Mendoza', '-33.0833','-68.8833'),
+	   (4,'Buenos Aires','-34.61315','-58.37723');
+       
+insert into vale_combustible(id_vc,id_viaje,  fecha_hora, id_lugar, costo, cantidad)
+values (1,1122,'2015-06-05 15:11:25',1, 5000.00, 250.00),   
+       (2,1122,'2015-06-06 07:36:55',2, 2000.00, 100.00),
+	   (3,3344,'2015-10-11 07:16:45',3, 2600.00, 200.00),
+	   (4,6677,'2015-07-06 15:30:14',4, 2250.00, 150.00);
 
-insert into vale_combustible(id_vc,id_viaje,  fecha_hora, lugar, costo, cantidad)
-values (1,1122,'2015-06-05 15:11:25', 'Entre Rios', 5000.00, 250.00),   
-       (2,1122,'2015-06-06 07:36:55', 'canasvieiras', 2000.00, 100.00),
-	   (3,3344,'2015-10-11 07:16:45', 'Mendoza', 2600.00, 200.00),
-	   (4,6677,'2015-07-06 15:30:14', 'Buenos Aires', 2250.00, 150.00);
+
+       
+
       
-/*select *
-from vale_combustible;
+/*SELECT combustible_cons combustible,fecha_inicio fecha
+										   FROM viaje 										
+										   WHERE id_transporte=7777
+                                           
  */
  
 
 /*select *
-from viaje;*/
+from vale_combustible;*/
 
 insert into repuesto(id_repuesto,descripcion,costo)
 values(1,'motor',15000),
@@ -320,8 +331,8 @@ values	(123, 006, 5555,1, 15000, '2015-08-06',1400),
 		(131, 003, 6666,9, 2500,'2015-06-26',3652);
 
         
-select * 
-from reparacion;
+SELECT km,fecha
+										   FROM reparacion	;
 
 insert into alar_transp (id_transporte, id_alarmas, contador)
 values	(1111, 990, 10),
