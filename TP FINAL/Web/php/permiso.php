@@ -11,5 +11,5 @@
 	
 	 if ( $filasafectadas != 1)
 		
-		die ("NO TENES PERMISO PARA INGRESAR ACA!");						
+		die ("<div id='divContenedor'> <h1> No dispone de permisos suficientes para ingresar a este sitio </h1> </div>");						
 ?>

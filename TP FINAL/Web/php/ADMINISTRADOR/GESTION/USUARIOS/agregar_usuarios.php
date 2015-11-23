@@ -4,7 +4,7 @@
 		<title>Agregar User | S.G.L</title>
 		
 		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="../../../../js/funciones/validarAgregarUsuarios.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarVC.js"></script>
 		
 		<LINK REL="Stylesheet" HREF="../Css/login.css" TYPE="text/css">
 	</head>
