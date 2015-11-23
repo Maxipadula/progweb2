@@ -8,6 +8,10 @@ $(document).ready(function () {
 
         var fyh = $("#fyh").val();
         var lugar = $("#lugar").val();
+        var latitud = $("#latitud").val();
+        var longitud = $("#longitud").val();
+        var costo = $("#costo").val();
+        var cantidad = $("#cantidad").val();
 
                     if(fyh == "" || !expr2.test(fyh)){
                          $("#mensaje1").fadeIn("slow");
@@ -16,12 +20,48 @@ $(document).ready(function () {
                     else{
                         $("#mensaje1").fadeOut();
 
-                            if(lugar == "" || !expr1.test(lugar)){
+                            if(lugar == "" || !expr.test(lugar)){
                             $("#mensaje2").fadeIn("slow");
                             return false;
-                         }
-                        else{
+                             }
+                            else{
                             $("#mensaje2").fadeOut();
+
+                                if(latitud == "" || !expr1.test(latitud)){
+                                $("#mensaje3").fadeIn("slow");
+                                return false;
+                                 }
+                                else{
+                                $("#mensaje3").fadeOut();
+
+                                    if(longitud == "" || !expr1.test(longitud)){
+                                    $("#mensaje4").fadeIn("slow");
+                                    return false;
+                                     }
+                                    else{
+                                    $("#mensaje4").fadeOut();
+
+                                        if(costo == "" || !expr1.test(costo)){
+                                        $("#mensaje5").fadeIn("slow");
+                                        return false;
+                                         }
+                                        else{
+                                        $("#mensaje5").fadeOut();
+
+                                            if(cantidad == "" || !expr1.test(cantidad)){
+                                            $("#mensaje6").fadeIn("slow");
+                                            return false;
+                                             }
+                                            else{
+                                            $("#mensaje6").fadeOut();
+                                            }
+
+                                        }
+
+                                    }
+                                }
+
+
                             }
 
                         }   

@@ -7,6 +7,12 @@
         session_start(); 
     } 
 	?>
+
+        <meta charset="UTF-8">
+	    <title>Agregar Transporte | S.G.L</title>
+		
+		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarModificarTransporte.js"></script>
 </head>
 <body>
 	<div id="divContenedor">
@@ -60,7 +66,9 @@
                                 Muy Bueno
                             </option>
                         </select></td>
-						
+	<div id="mensaje1" class="errores">Seleccione un Estado</div>
+	</br>
+
 	<input type="submit" value="Seguir" class="boton" id="boton">
 	</form>
 </div>

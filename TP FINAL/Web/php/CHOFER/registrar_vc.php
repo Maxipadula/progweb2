@@ -36,7 +36,7 @@
 						<div><label>FECHA Y HORA</label>
 						</br>
 							<input type="text" name="fecha_hora_vc" id="fyh" placeholder="AAAA-MM-DD hh:mm:ss">
-							<div id="mensaje1" class="errores"> Ingresa fecha valida</div>
+							<div id="mensaje1" class="errores"> Ingrese fecha valida</div>
 						</div>
 						
 						</br>
@@ -44,37 +44,32 @@
 						<div><label>LUGAR</label>
 							</br>
 							<input type="text" name="lugar_vc" id="lugar" placeholder="Lugar">
-							<div id="mensaje2" class="errores"> Ingresa solo letras</div>							
+							<div id="mensaje2" class="errores"> Ingrese solo letras</div>							
 						</div>
 						</br>
 						
 						<div><label>LATITUD</label>
 							</br>
-							<input type="text" name="latitud" placeholder="Ingrese Latitud del GPS">
+							<input type="text" name="latitud" id="latitud" placeholder="Ingrese Latitud del GPS">
+							<div id="mensaje3" class="errores"> Ingrese solo numeros</div>	
 						</div>
 						</br>
 						<div><label>LONGITUD</label>
 							</br>
-							<input type="text" name="longitud" placeholder="Ingrese Longitud del GPS">
+							<input type="text" name="longitud" id="longitud" placeholder="Ingrese Longitud del GPS">
+							<div id="mensaje4" class="errores"> Ingrese solo numeros</div>	
 							
 						</div>
 						</br>
-						
-						</br>
-						
-						<div><label>COSTO</label>
-							</br>
-							<input type="text" name="costo_vc">
-							
+						<div><label>COSTO</label></br>
+							<input type="text" name="costo_vc" id="costo" placeholder="Costo">
+							<div id="mensaje5" class="errores"> Ingrese solo numeros</div>	
 						</div>
 						</br>
-						
-						</br>
-						
-						<div><label>CANTIDAD</label>
-							</br>
-							<input type="text" name="cantidad_vc">
-							
+											
+						<div><label>CANTIDAD</label></br>							
+							<input type="text" name="cantidad_vc" id="cantidad" placeholder="Cantidad">
+							<div id="mensaje6" class="errores"> Ingrese solo numeros</div>	
 						</div>
 						</br>
 				

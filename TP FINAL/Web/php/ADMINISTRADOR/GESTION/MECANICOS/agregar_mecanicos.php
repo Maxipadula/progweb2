@@ -27,10 +27,9 @@
 			$id_mecanico +=1;
 	?>
 	<div id="divContenedor">
- 	FORMULARIO PARA TABLA MECANICO:
+ 	<h3>FORMULARIO PARA TABLA MECANICO: </h3>
  	<form class='contacto' method="post" name="mecanico" action="<?php echo $validar_datos_mecanicos ?>">
  		<div id="contacto">
- 				</br>
  				<div><label>ID
 					</br>
 					<input type="text" name="id_me"  value="<?php echo $id_mecanico?>"readonly = "readonly">

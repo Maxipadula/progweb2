@@ -2,14 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
-	<title>Agregar Transporte | S.G.L</title>
+	    <title>Agregar Transporte | S.G.L</title>
 		
 		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../../../../js/funciones/validarAgregarTransporte.js"></script>
-		
-				
-		
-					
     </head>
     <body>
         <?php include ("transportes_datos.php"); ?><?php       

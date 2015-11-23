@@ -118,9 +118,9 @@
 		
 		
 		
-		echo "</br> <input type='submit' value='Enviar'/>
-							<input type='reset' value='Borrar'/>
-							<input type='button' onclick='history.back()' name='volver atrás' value='Volver'></form> ";
+		echo "</br> <input type='submit' value='Enviar' class='boton'/>
+							<input type='reset' value='Borrar'class='boton'/>
+							<input type='button' onclick='history.back()' name='volver atrás' value='Volver' class='boton'></form> ";
 							
 		
 		function ifs ($check){

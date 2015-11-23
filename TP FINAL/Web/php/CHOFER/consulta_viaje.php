@@ -15,12 +15,12 @@
 
 	?>
  	<div id="divContenedor">
- 	</br>
- 	<p>DATOS DE VIAJE ASIGNADO</p>
+ 	
+ 	<h3>DATOS DE VIAJE ASIGNADO</h3>
 
- 	<form class='contacto' method="post" ">
+ 	<form class='contacto' method="post">
  		<div id="contacto">
- 				</br>
+
  				<div><label>ID DE VIAJE</label>
 					</br>
 					<input type="text" name="id_viaje"  value="<?php echo $id_viaje?>"readonly = "readonly">
@@ -63,9 +63,6 @@
  					</br>
  				<input type="text" name="acoplado" id="acoplado" value="<?php echo $viaje["acoplado"]?>"readonly = "readonly">				
  				</div>
- 				</br>
-				
- 				
  	</form>
  	</div>
  </div>
